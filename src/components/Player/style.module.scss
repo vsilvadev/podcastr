@@ -112,11 +112,25 @@
         border: 0;
         font-size: 0;
 
+        transition: filter 0.3s;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+            filter:brightness(0.7);
+        }
+
         &.playButton {
             width: 4rem;
             height: 4rem;
             border-radius: 1rem;
-            background: var(--purple-300)
+            background: var(--purple-300);
+
+            &:hover:not(:disabled) {
+                filter:brightness(0.9);
+            }
         }
     }
 }
